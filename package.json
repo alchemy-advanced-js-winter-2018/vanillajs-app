@@ -2,7 +2,7 @@
   "name": "class03_async-promises",
   "version": "1.0.0",
   "description": "## Questions and Feedback * ?",
-  "main": "event-loop.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
