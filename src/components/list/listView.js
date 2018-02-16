@@ -26,8 +26,21 @@ export default class ItemList{
 
       list.appendChild(itemDom);
     });
+
+    this.onRemoved = this.list.on('child_removed', data => {
+      const { component, dom } = map.get(data.key);
+      map.delete(data.key);
+      component.unrender();
+      dom.forEach(node => node.remove());
+    });
+
     return dom;
 
+  }
+
+  unrender() {
+    this.list.off('child_added', this.onAdded);
+    this.list.off('child_removed', this.onRemoved);
   }
 
 }
