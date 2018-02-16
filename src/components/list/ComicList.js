@@ -1,6 +1,7 @@
 import html from './ComicList.html';
 import Template from '../Template';
 import Comic from './Comic';
+import './list.css';
 
 const template = new Template(html);
 

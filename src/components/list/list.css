@@ -1,0 +1,30 @@
+#list {
+  list-style-type: none;
+  text-align: center;
+  padding-left: 0;
+}
+
+.comic {
+  display: flex;
+  justify-content: space-between;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: .7%;
+  font-size: 1.5em;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.check {
+  transform: scale(1.75);
+  box-shadow: -5px 5px 5px grey;
+}
+
+.remove {
+  box-shadow: -5px 5px 5px grey;
+  margin-left: 2%;
+  font-size: .5em;
+}
+
+.remove:active {
+  box-shadow: -2px 2px 2px;
+}
