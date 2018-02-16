@@ -18,11 +18,11 @@ export default class Item{
     const itemElement = dom.querySelector('.task');
 
     this.onValue = this.item.on('value', data => {
-      const item = data.val();
+      const { task } = data.val();
 
-      itemElement.textContent = item;
+      itemElement.textContent = task;
     });
-    console.log('in render change');
+    
     return dom;
   }
 

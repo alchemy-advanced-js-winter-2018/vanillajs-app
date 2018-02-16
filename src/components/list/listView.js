@@ -1,6 +1,6 @@
 //TodoList.js
 
-import html from './listView';
+import html from './listView.html';
 import Template from '../template';
 import Item from './listItem';
 
@@ -14,7 +14,6 @@ export default class ItemList{
   render(){
     const dom = template.clone();
     const list = dom.querySelector('ul');
-
     const map = new Map();
 
     this.onAdded = this.list.on('child_added', data => {
