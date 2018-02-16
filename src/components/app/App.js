@@ -4,7 +4,7 @@ import { db } from '../../services/firebase';
 import AddComic from '../addComic/AddComic';
 import ComicList from '../list/ComicList';
 import Filter from '../filter/Filter';
-
+import './app.css';
 
 const comics = db.ref('comics');
 const template = new Template(html);

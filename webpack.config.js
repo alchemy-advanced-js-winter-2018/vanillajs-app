@@ -59,20 +59,20 @@ module.exports = {
           }
         ]
       },
-      // // load images!
-      // {
-      //   test: /\.(jpg|png|svg)$/,
-      //   use: {
-      //     loader: 'url-loader',
-      //     // default is to inline the image content
-      //     // via base64 encoding.
-      //     // If file is bigger than this limit,
-      //     // create a "real" file
-      //     options: {
-      //       limit: 5000,
-      //     },
-      //   },
-      // }
+      // load images!
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: 'url-loader',
+          // default is to inline the image content
+          // via base64 encoding.
+          // If file is bigger than this limit,
+          // create a "real" file
+          options: {
+            limit: 5000,
+          },
+        },
+      }
     ]
   }
 };

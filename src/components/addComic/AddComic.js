@@ -1,6 +1,7 @@
 import html from './addComic.html';
 import Template from '../Template';
 import { db } from '../../services/firebase';
+import './addComic.css';
 
 const template = new Template(html);
 const comics = db.ref('comics');
