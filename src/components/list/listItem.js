@@ -12,18 +12,32 @@ export default class Item{
     this.item = items.child(key);
   }
 
+  handleRemove(){
+    this.item.remove();
+  }
+
   render(){
     const dom = template.clone();
-    
+    const removeButton = dom.querySelector('button.remove');
     const itemElement = dom.querySelector('.task');
 
     this.onValue = this.item.on('value', data => {
-      const { task } = data.val();
+      const item = data.val();
+      if(!item) return;
 
+      const { task } = data.val();
       itemElement.textContent = task;
+    });
+
+    removeButton.addEventListener('click', () => {
+      this.handleRemove();
     });
     
     return dom;
+  }
+
+  unrender(){
+    this.item.off('value', this.onValue);
   }
 
 }
