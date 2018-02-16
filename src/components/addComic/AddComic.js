@@ -7,12 +7,32 @@ const comics = db.ref('comics');
 
 export default class AddComic {
 
+  handleSubmit(name) {
+    const ref = comics.push();
+    return ref.set({ name, completed: false });
+  }
+
   render() {
     const dom = template.fragment;
-
+    
     const form = dom.querySelector('form');
     const error = dom.querySelector('.error');
 
-    
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      error.textContent = '';
+
+      const { name } = form.elements;
+      
+      this.handleSubmit(name.value)
+        .then(() => {
+          name.value = '';
+        })
+        .catch(err => {
+          error.textContent = err.message;
+        });
+    });
+
+    return dom;
   }
 }
