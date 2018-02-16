@@ -1,5 +1,6 @@
 import html from './Filter.html';
 import Template from '../Template';
+import './filter.css';
 
 const template = new Template(html);
 
