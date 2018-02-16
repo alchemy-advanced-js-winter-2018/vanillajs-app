@@ -9,7 +9,7 @@ export default class AddComic {
 
   handleSubmit(name) {
     const ref = comics.push();
-    return ref.set({ name, completed: false });
+    return ref.set({ name, seen: false });
   }
 
   render() {
