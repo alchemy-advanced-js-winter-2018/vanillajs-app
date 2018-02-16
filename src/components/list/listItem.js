@@ -20,6 +20,7 @@ export default class Item{
     const dom = template.clone();
     const removeButton = dom.querySelector('button.remove');
     const itemElement = dom.querySelector('.task');
+    const selectOption = dom.querySelector('select');
 
     this.onValue = this.item.on('value', data => {
       const item = data.val();
@@ -32,7 +33,12 @@ export default class Item{
     removeButton.addEventListener('click', () => {
       this.handleRemove();
     });
-    
+
+    selectOption.addEventListener('change', () => {
+      let theOption = selectOption.options[selectOption.selectedIndex].text;
+      this.item.child('ranking').set(theOption);
+    });
+
     return dom;
   }
 

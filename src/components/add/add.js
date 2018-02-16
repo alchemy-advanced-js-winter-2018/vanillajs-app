@@ -9,7 +9,8 @@ export default class addItem{
 
   handleSubmit(task){
     const ref = items.push();
-    return ref.set({ task, test: 'test' });
+    console.log(ref);
+    return ref.set({ task, ranking: 'good' });
   }
 
   render(){

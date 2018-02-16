@@ -30,7 +30,6 @@ export default class ItemList{
     this.onRemoved = this.list.on('child_removed', data => {
       const { component, dom } = map.get(data.key);
       map.delete(data.key);
-      console.log(component);
       component.unrender();
       dom.forEach(node => node.remove());
     });
@@ -41,7 +40,6 @@ export default class ItemList{
 
   unrender(){
     this.list.off('child_added', this.onAdded);
-    console.log(this.list);
     this.list.off('child_removed', this.onRemoved);
   }
 
