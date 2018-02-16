@@ -1,0 +1,12 @@
+body{
+    color: white;
+    background-color: red;
+    font-family: monospace;
+    margin-top: 10%;
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+

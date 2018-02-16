@@ -2,6 +2,7 @@ import html from './app.html';
 import Template from '../template';
 import AddItem from '../add/add';
 import ItemList from '../list/listView';
+import '../../style.css';
 
 // import Filter from '../filter/Filter';
 import { db } from '../../services/firebase';
